@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/map_screen"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MapFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/startSearchInput"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_row"
+            android:textAlignment="center"
+            android:hint="출발지 입력" />
+        <EditText
+            android:id="@+id/destSearchInput"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_row"
+            android:textAlignment="center"
+            android:hint="도착지 입력" />
+
+        <Button
+            android:id="@+id/buttona"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_row"
+            android:text="search"
+            android:textSize="11dp"
+            android:onClick="mOnClick"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat = "@drawable/img_sub"
+        />
+
+
+</FrameLayout>

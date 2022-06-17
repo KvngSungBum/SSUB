@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="#1D1D1D"
+    android:backgroundTint="#1D1D1D"
+    android:elevation="10dp">
+
+    <RelativeLayout
+        android:id="@+id/btn_bottom_navi_home_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1D1D1D"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#203C61"
+            android:src="@drawable/ic_baseline_home" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_bottom_navi_map_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1D1D1D"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_bottom_navi_settings_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1D1D1D"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_settings_24" />
+    </RelativeLayout>
+
+
+</LinearLayout>

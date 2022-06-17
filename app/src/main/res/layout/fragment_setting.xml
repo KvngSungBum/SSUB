@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/setting_screen"
+    tools:context=".fragment.SettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/settingTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/nanumgothic"
+                android:text="설정"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/loginTextBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/nanumgothic"
+                android:text="로그인"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layer_setting_line"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/settingScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/languageTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="언어"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/set_langBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/main_list_row"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/liveArrivalTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="실시간 도착 정보 사용"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Switch
+                        android:id="@+id/set_liveDataSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/autoUpdateTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="데이터 자동 업데이트(Wi-Fi)"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Switch
+                        android:id="@+id/set_autoUpdateSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/setWidgetTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="위젯 설정"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/set_widgetBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/layer_setting_line"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/setHDSubwayTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="고화질 노선도"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Switch
+                        android:id="@+id/set_HDSubSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/setWideTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="노선도 가로보기"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Switch
+                        android:id="@+id/set_wideSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/set_changeLoc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="지역변경"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/set_changeLocSwitch"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/layer_setting_line"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/main_list_row"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="오픈소스 라이브러리"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="개인정보 처리방침"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="이용약관"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="앱 추천하기"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="5"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="어플리케이션 문의"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="자주 묻는 질문"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button7"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_list_row"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="5"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="공지사항"
+                        android:textColor="#000000"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/ic_baseline_arrow_forward_ios_24"
+                        android:backgroundTint="@color/white"
+                        app:backgroundTint="#000000" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>
